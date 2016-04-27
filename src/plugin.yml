@@ -7,3 +7,9 @@
  website: http://wwww.paskl.de
 
  main: de.paskl.useditems.Main
+
+ commands:
+   cui:
+     description: Count Used Items Commands
+     aliases: [count-used-items]
+     usage: /<command> [0|off|1|on|show|reset]
