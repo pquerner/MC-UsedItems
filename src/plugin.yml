@@ -1,0 +1,9 @@
+ name: Count Used Items
+ version: 0.1
+ description: Count Used Items by Paco
+
+ author: Paco
+ authors: [Paco]
+ website: http://wwww.paskl.de
+
+ main: de.paskl.useditems.Main
