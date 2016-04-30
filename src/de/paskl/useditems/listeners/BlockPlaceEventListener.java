@@ -48,11 +48,13 @@ public class BlockPlaceEventListener implements Listener {
             } else if (this.plugin.personsBlockCount.containsKey(p.getName())
                     && !this.plugin.personsBlockCount.get(p.getName()).containsKey(itemId)) {
                 //Item does not exist yet
-                this.plugin.personsBlockCount.get(p.getName()).put(itemId, "1_0");
+                String saveStr = String.format("%d_%d", 1, typeId);
+                this.plugin.personsBlockCount.get(p.getName()).put(itemId, saveStr);
             } else if (!this.plugin.personsBlockCount.containsKey(p.getName())) {
                 //very first item placed
                 Map<Integer, String> itemsCount = new HashMap<>();
-                itemsCount.put(itemId, "1_0"); //Add first placed item
+                String saveStr = String.format("%d_%d", 1, typeId);
+                itemsCount.put(itemId, saveStr); //Add first placed item
                 this.plugin.personsBlockCount.put(p.getName(), itemsCount);
             } else {
                 //Something fucked up
